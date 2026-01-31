@@ -6,7 +6,7 @@ import vaex
 @st.cache_data
 def load_data():
     uri = (
-        "mongodb+srv://dainlh21405:qqOjroljGq2s18Qc@cluster0.catt6oh.mongodb.net/"
+        "mongodb+srv://dainlh21405:<password>@cluster0.catt6oh.mongodb.net/"
         "mydb?retryWrites=true&w=majority&tls=true")
     client = MongoClient(uri)
     collection = client["mydb"]["mycollection"]
@@ -102,3 +102,4 @@ outliers = year_count[
 
 st.subheader("⚠️ Anomalous years")
 st.dataframe(outliers)
+
